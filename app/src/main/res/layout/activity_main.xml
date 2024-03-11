@@ -30,7 +30,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginRight="@dimen/_16sdp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@drawable/power"
         android:background="@drawable/background_icon"
         android:padding="@dimen/_6sdp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,4 +55,33 @@
         app:layout_constraintStart_toEndOf="@id/imageProfile"
         app:layout_constraintTop_toTopOf="@id/imageProfile"
     />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:background="@drawable/backgroun_content_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textName"
+        >
+
+
+    </FrameLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingAddUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:layout_marginRight="@dimen/_24sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/add"
+        android:backgroundTint="@color/background_Icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:tint="@color/white"
+        />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
     private void setListener()
     {
         binding.imageLogout.setOnClickListener(v -> signOut());
+        binding.floatingAddUser.setOnClickListener(v -> {
+            startActivity(new Intent(getApplicationContext(), UsersActivity.class));
+        });
     }
     private void showToast(String message){
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
@@ -61,9 +64,7 @@ public class MainActivity extends AppCompatActivity {
                         preferenceManager.getString(Constants.KEY_USER_ID)
                 );
         documentReference.update(Constants.KEY_FCM_TOKEN, token)
-                .addOnSuccessListener(unused -> {
-                    showToast("Token updated successfully");
-                }).addOnFailureListener(e -> showToast("Unable to update token"));
+                .addOnFailureListener(e -> showToast("Unable to update token"));
     }
 
     private void signOut(){
